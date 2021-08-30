@@ -1,4 +1,3 @@
-import Head from "next/head";
 import DetailCard from "../components/DetailCard";
 
 import Header from "../components/Header";
@@ -9,7 +8,7 @@ export default function Home({ result, casesByCity }) {
     // <div className="flex flex-col items-center justify-center min-h-screen py-2">
     <div className="">
       <Header />
-      <main className="p-4">
+      <main className="p-4 dark:bg-gray-900">
         <OverviewCard data={result} />
         <DetailCard data={casesByCity} />
       </main>

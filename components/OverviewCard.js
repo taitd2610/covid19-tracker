@@ -10,13 +10,13 @@ const OverviewCard = ({ data }) => {
   var lastUpdate = moment(data.lastUpdate);
 
   return (
-    <div className="flex flex-col p-4 justify-center shadow rounded-md text-center mb-4">
-      <div className="mb-4">
+    <div className="flex flex-col p-6 justify-center shadow rounded-md text-center mb-4 dark:bg-gray-800">
+      <div className="mb-4 dark:text-gray-100 ">
         <p className="font-bold text-lg">Số liệu Covid-19 tại Việt Nam</p>
         <p>Cập nhật lần cuối: {lastUpdate.fromNow()}</p>
       </div>
 
-      <div className="grid grid-cols-2 gap-4">
+      <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
         <div className="grid gap-2 bg-red-50 p-4 rounded-md text-red-600">
           <p className="font-bold">Ca nhiễm</p>
           <CountUp
@@ -26,7 +26,7 @@ const OverviewCard = ({ data }) => {
             duration={2.75}
           />
 
-          <p>Hôm nay:{0}</p>
+          <p>Hôm nay:{data.todayNewCases * 1000}</p>
         </div>
 
         <div className="grid gap-2 bg-yellow-50 p-4 rounded-md text-yellow-400">
