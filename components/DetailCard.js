@@ -1,7 +1,7 @@
 const DetailCard = ({ data }) => {
   return (
     <div className="overflow-x-hidden bg-white rounded-lg shadow overflow-y-scroll relative wrapper md:overflow-x-visible">
-      <table className="border-collapse table-auto w-full whitespace-no-wrap bg-white table-striped relative">
+      <table className="border-collapse table-auto w-full whitespace-no-wrap bg-white table-striped relative dark:bg-gray-800">
         <thead>
           <tr className="text-left">
             <th className="bg-gray-100 sticky top-0 border-b border-gray-200 px-6 py-4 text-gray-400 font-bold tracking-wider uppercase text-sm md:text-base dark:bg-gray-800 dark:border-gray-600">
