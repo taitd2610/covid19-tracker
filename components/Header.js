@@ -22,7 +22,7 @@ const Header = () => {
   };
 
   return (
-    <nav className="grid grid-cols-5 md:grid-cols-3 shadow-md py-4 items-center bg-white dark:bg-gray-800 dark:text-gray-100">
+    <nav className="grid grid-cols-5 md:grid-cols-3 shadow-md py-4 items-center bg-gray-50 dark:bg-gray-800 dark:text-gray-100">
       <div className="flex px-4 items-center">
         <Image src={coronaVirus} width="36px" height="36px"></Image>
         <p className="hidden md:inline font-semibold ml-2 text-xl">
@@ -34,13 +34,17 @@ const Header = () => {
         <p className="cursor-pointer text-lg">Việt Nam</p>
       </div>
       <div className="flex justify-end pr-4">
-        <Image
-          className="cursor-pointer"
-          src={src}
-          width="24px"
-          height="24px"
+        <div
+          className="flex p-2 rounded-lg cursor-pointer hover:bg-white dark:hover:bg-gray-700"
           onClick={changeTheme}
-        ></Image>
+        >
+          <Image
+            className="cursor-pointer"
+            src={src}
+            width="24px"
+            height="24px"
+          ></Image>
+        </div>
       </div>
     </nav>
   );
