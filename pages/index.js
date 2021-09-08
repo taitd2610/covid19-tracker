@@ -1,3 +1,5 @@
+import Head from "next/head";
+
 import DetailCard from "../components/DetailCard";
 
 import Header from "../components/Header";
@@ -7,6 +9,11 @@ export default function Home({ result, casesByCity }) {
   return (
     // <div className="flex flex-col items-center justify-center min-h-screen py-2">
     <div className="">
+      <Head>
+        <title>Covid Tracker</title>
+        <link rel="icon" href="/coronavirus.svg" />
+      </Head>
+
       <Header />
       <main className="p-4 dark:bg-gray-900">
         <OverviewCard data={result} />
@@ -16,7 +23,7 @@ export default function Home({ result, casesByCity }) {
   );
 }
 
-export async function getStaticProps(context) {
+export async function getServerSideProps(context) {
   const res = await fetch(`https://sheetdb.io/api/v1/oicq1zp0cykpn/`);
   const data = await res.json();
   const result = data[0];
